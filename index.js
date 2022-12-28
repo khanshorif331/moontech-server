@@ -20,6 +20,7 @@ const run = async () => {
 	try {
 		const db = client.db('moontech')
 		const productCollection = db.collection('product')
+		console.log('Database connected')
 
 		app.get('/products', async (req, res) => {
 			const cursor = productCollection.find({})
